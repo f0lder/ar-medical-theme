@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-rendering: optimizeLegibility !important;
+}
+
+.input,
+.select,
+.textarea {
+    @apply focus:outline-primary focus:border-primary;
+}
+
+#breadcrumbs {
+    @apply font-normal text-base;
+}
+
+#breadcrumbs i {
+    @apply mx-2;
+}
+
+.features-text h6 {
+    font-size: 16px;
+    @apply mt-8 text-center md:text-left;
+}
+
+.features-text h2 {
+    font-size: 36px;
+    @apply mb-5 text-center md:text-left;
+    font-weight: 500;
+}
+
+.features-text p {
+    font-size: 16px;
+    @apply mb-4 text-center md:text-left;
+    font-weight: 400;
+}
+
+.fil input[type="checkbox"] {
+    @apply checkbox border-black rounded-none checked:checkbox-primary;
+}
+
+
+.btn-primary {
+    @apply rounded-none;
+    @apply hover:text-white;
+}
+
+.wcmd-btn {
+    @apply btn btn-accent;
+}
+
+
+.bapf_tax_product_cat {
+    @apply p-2;
+}
+
+.divider:last-child {
+    @apply hidden;
+}
+
+.schedule-form input,
+.schedule-form textarea,
+.schedule-form select {
+    @apply rounded-none;
+}
+
+
+
+.page-numbers {
+    @apply flex items-center justify-center gap-2 flex-wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.page-numbers li, a.page-numbers,span.page-numbers {
+    @apply size-10;
+}
+
+.page-numbers li>* {
+    @apply w-full h-full;
+}
+
+.woocommerce-pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    @apply py-8;
+}
+
+select.orderby {
+    @apply w-full select select-bordered rounded-none border border-gray-200 bg-[#fbfbfb] text-xl h-auto p-2 pt-4;
+}
+
+/*
+Menu fade effect for other elements not hovered
+*/
+
+
+
+
+.fil {
+    background-color: #FBFBFB;
+    @apply mb-6;
+}
+
+.fil h3 {
+    @apply text-xl py-4 px-1 cursor-pointer;
+}
+
+.fil ul {
+    @apply py-2 px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2;
+}
+
+.fil ul li {
+    @apply p-2 !important;
+}
+
+
+.comment-reply-title {
+    @apply text-3xl mb-2 font-medium;
+}
+
+.comment-respond,
+.comment-list {
+    @apply p-9 bg-[#fbfbfb] pt-8 mt-8 border-t border-[#e8e8e8];
+}
+
+.required-field-message {
+    @apply block my-3;
+}
+
+.comment-respond a,
+.comment-list a {
+    @apply underline;
+}
+
+.comment-respond a:hover,
+.comment-list a:hover {
+    @apply text-primary;
+}
+
+.comment-form-comment {
+    @apply flex flex-col;
+}
+
+.submit {
+    @apply btn btn-lg btn-primary uppercase;
+}
+
+textarea#comment {
+    @apply textarea textarea-bordered rounded-none resize-none mt-4;
+}
+
+.form-submit {
+    @apply py-7 flex flex-row items-center justify-center;
+}
+
+.desc {
+    @apply pb-5 border-b border-[#e8e8e8];
+}
+
+.desc h3 {
+    @apply text-3xl font-bold mb-2 leading-[1.2];
+}
+
+.desc p {
+    @apply text-base leading-relaxed;
+}
+
+.tabs li[role="tab"] {
+    @apply col-span-4 md:col-span-2 lg:col-span-1;
+}
+
+.tabs li[role="tab"] a {
+    @apply opacity-40 text-center py-3 block w-full;
+}
+
+.tabs li[role="tab"]:hover a {
+    @apply opacity-100;
+}
+
+.tabs li[role="tab"].active a {
+    @apply opacity-100;
+}
+
+.panel {
+    @apply p-10;
+    border: 1px solid #e8e8e8;
+}
+
+ul.tabs {
+    @apply grid grid-cols-10 gap-5 pl-8;
+}
+
+
+p.price {
+    @apply my-5 text-primary text-3xl font-medium;
+}
+
+p.price del {
+    @apply text-black;
+}
+
+.woocommerce-Price-amount {
+    @apply no-underline;
+}
+
+.woocommerce-notices-wrapper {
+    @apply mx-auto max-w-6xl;
+}
+
+.woocommerce-message {
+    @apply w-full h-fit;
+}
+
+.tinvwl_add_to_wishlist_button {
+    @apply btn btn-ghost btn-lg;
+}
+
+span.onsale {
+    @apply bg-primary text-white px-2 py-1 absolute top-0 left-0;
+}
+
+
+.add-to-cart .button {
+    @apply btn btn-primary uppercase;
+}
+
+.add-to-cart .button.loading {
+    @apply loading-spinner text-primary;
+}
+
+.wc-forward {
+    @apply underline hover:text-primary;
+}
+
+.without-ring {
+    @apply focus:outline-none focus:ring-0 focus:ring-offset-0;
+    @apply focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0;
+    @apply border-none;
+}
+
+.showlogin,
+.showcoupon,
+.woocommerce-terms-and-conditions-link {
+    @apply underline hover:text-primary;
+}
+
+.payment-header {
+    @apply text-3xl font-bold mb-5 leading-[1.2] border-b border-[#e8e8e8] pb-2;
+}
+
+.woocommerce-NoticeGroup {
+    @apply col-span-6;
+}
+
+p.select {
+    @apply rounded-none bg-transparent;
+    background-image: none;
+    border: none;
+    border-width: 0;
+}
+
+select#smartbill_billing_type {
+    @apply rounded-none without-ring;
+}
+
+#select_locker {
+    @apply btn btn-primary btn-outline rounded-none;
+}
+
+.look_in button.button {
+    @apply btn btn-primary btn-outline rounded-none;
+}
+
+.tinvwl-to-right {
+    @apply w-full px-3;
+}
+
+#breadcrumbs a {
+    @apply hover:underline;
+}
+
+.wpc-filter-content input[type="checkbox"] {
+    @apply checkbox border-black rounded-none checked:checkbox-primary;
+}
+
+.taxonomy-container{
+}
+
+.taxonomy-submenu{
+    @apply inline-block;
+}
+
+.taxonomy-list{
+    
+}
+
+.taxonomy-title, .taxonomy-submenu-title{
+    @apply text-2xl uppercase py-2;
+}
+
+.taxonomy-submenu-title, .taxonomy-submenu-item{
+    @apply text-center;
+}
+.taxonomy-item{
+    @apply py-1;
+}
+
+.taxonomy-item:hover{
+    @apply underline text-primary cursor-pointer;
+}
+
+.taxonomy-item a{
+    @apply w-full;
+}

@@ -1,0 +1,57 @@
+{
+	"name": "ar-medical",
+	"version": "1.0.1",
+	"description": "Tema site-ului Ar Medical Cosmetic, bazata pe tema _s",
+	"author": "Ursan Bogdan / Automattic Theme Team",
+	"license": "GPL-2.0-or-later",
+	"keywords": ["WordPress", "Theme"],
+	"homepage": "https://github.com/Automattic/_s#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Automattic/_s.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Automattic/_s/issues"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.2",
+		"chokidar-cli": "^3.0.0",
+		"cssnano": "^7.0.6",
+		"daisyui": "^4.12.10",
+		"dir-archiver": "^1.1.1",
+		"node-sass": "^9.0.0",
+		"postcss-cli": "^11.0.0",
+		"postcss-multiple-tailwind": "^1.0.1",
+		"rtlcss": "^3.5.0",
+		"tailwindcss": "^3.4.10",
+		"uglify-js": "^3.19.3"
+	},
+	"rtlcssConfig": {
+		"options": {
+			"autoRename": false,
+			"autoRenameStrict": false,
+			"blacklist": {},
+			"clean": true,
+			"greedy": false,
+			"processUrls": false,
+			"stringMap": []
+		},
+		"plugins": [],
+		"map": false
+	},
+	"scripts": {
+		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+		"compile:rtl": "rtlcss style.css style-rtl.css",
+		"lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+		"lint:js": "wp-scripts lint-js 'js/*.js'",
+		"bundle": "dir-archiver --src . --dest ../ar-medical.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json *.config.js .travis.yml phpcs.xml.dist yarn.lock js/skip-link-focus-fix.js js/wp-embed.js js/wp-emoji-release.min.js js/wp-emoji-release.min.js.map js/wp-embed.js.map js/wp-emoji.min.js js/wp-emoji.min.js.map js/wp-embed.min.js js/wp-embed.min.js.map js/wp-emoji.js js/wp-emoji.js.map js/wp-embed.js styles",
+		"watch": "chokidar '**/*.php' 'styles/tailwind.css' -c 'npm run build:css'",
+		"build:main": "postcss styles/tailwind.main.css -o styles/compiled.css --verbose && postcss styles/compiled.css --use cssnano --no-map -o main.min.css",
+		"minify:content": "postcss content.css --use cssnano --no-map -o content.min.css",
+		"build:critical": "postcss styles/critical.css --use cssnano --no-map -o critical.min.css"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.19",
+		"postcss": "^8.4.40"
+	}
+}

@@ -1,0 +1,10 @@
+wp-content/uploads
+wp-content/upgrade
+wp-content/backup-db
+wp-content/plugins
+wp-content/cache
+wp-content/languages
+wp-content/jetpack-waf
+wp-content/upgrade-temp-backup
+wp-content/themes/ar-medical/vendor
+wp-content/themes/ar-medical/node_modules

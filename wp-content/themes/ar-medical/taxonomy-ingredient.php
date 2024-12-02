@@ -42,15 +42,25 @@ get_header('shop') ?>
 
     <?php wp_reset_postdata(); ?>
 
-    <div class="grid grid-cols-5 gap-5">
-        <?php
-        echo do_shortcode('[taxonomies_submenu slug="rutina"]');
-        echo do_shortcode('[taxonomies_submenu slug="ingredient"]');
-        echo do_shortcode('[taxonomies_submenu slug="linie"]');
-        echo do_shortcode('[taxonomies_submenu slug="problema-pilele"]');
-        echo do_shortcode('[taxonomies_submenu slug="tip-ten"]');
+    <!-- Back to Shop Button -->
+    <div class=" w-full py-5 flex justify-center">
+        <a class="btn btn-primary rounded-none uppercase" href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>" class="button">
+           <i class="fa fa-arrow-left"></i>
+        <?php echo __('Back to shop', 'woocommerce'); ?>
+        </a>
+    </div>
 
-        ?>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <?php echo do_shortcode('[taxonomies_submenu slug="rutina"]'); ?>
+
+        <?php echo do_shortcode('[taxonomies_submenu slug="ingredient"]'); ?>
+
+        <?php echo do_shortcode('[taxonomies_submenu slug="linie"]'); ?>
+
+        <?php echo do_shortcode('[taxonomies_submenu slug="problema-pilele"]'); ?>
+
+        <?php echo do_shortcode('[taxonomies_submenu slug="tip-ten"]'); ?>
+
 
     </div>
 

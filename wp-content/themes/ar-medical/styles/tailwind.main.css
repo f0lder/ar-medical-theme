@@ -313,9 +313,11 @@ select#smartbill_billing_type {
     @apply text-2xl uppercase py-2;
 }
 
-.taxonomy-submenu-title, .taxonomy-submenu-item{
+.taxonomy-submenu-title{
     @apply text-center;
 }
+
+
 .taxonomy-item{
     @apply py-1;
 }
@@ -324,6 +326,14 @@ select#smartbill_billing_type {
     @apply underline text-primary cursor-pointer;
 }
 
+.taxonomy-submenu-item:hover{
+    @apply text-primary;
+}
+
 .taxonomy-item a{
     @apply w-full;
+}
+
+.taxonomy-submenu-list{
+    @apply menu;
 }

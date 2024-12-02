@@ -697,7 +697,7 @@ function generate_taxnomies_submenu($slug)
 	$output .= '<ul class="taxonomy-submenu-list">';
 	foreach ($terms as $term) {
 		$term_link = esc_url(get_term_link($term));
-		$output .= '<li class="taxonomy-submenu-item"><a href="' . $term_link . '">' . esc_html($term->name) . '</a></li>';
+		$output .= '<li class="taxonomy-submenu-item"><a class="text-center" href="' . $term_link . '">' . esc_html($term->name) . '</a></li>';
 	}
 	$output .= '</ul></div>';
 
